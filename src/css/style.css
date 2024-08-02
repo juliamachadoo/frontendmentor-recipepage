@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Color-p1: hsl(14, 45%, 36%);
+--Color-p2: hsl(332, 51%, 32%);
+
+/* Neutral color */
+--Color-00: hsl(0, 0%, 100%);
+--Color-01: hsl(30, 18%, 87%);
+--Color-02: hsl(30, 10%, 34%);
+--Color-03: hsl(24, 5%, 18%);
+--Color-04: hsl(330, 31%, 94%);
+--Background-color: hsl(330, 16%, 87%);
+
+}
+
+body{
+    background-color: var(--Background-color);
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    padding: 1.9rem 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    line-height: 1.6;
+}
+
+.line{
+    width: 100%;
+    border-bottom: 1px solid var(--Color-01);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container {
+    background-color: var(--Color-00);
+    padding: 2.2rem;
+    margin: auto;
+    max-width: 32rem;
+    border-radius: 0.7rem;
+}
+
+
+.preparation-time {
+    margin-top: 1.4rem;
+}
+
+.ingredients,
+.instructions,
+.instructions li,
+.nutrition {
+    color: var(--Color-p1);
+}
+
+.preparation-time,
+.preparation-time li{
+    color: var(--Color-p2);
+}
+
+.container img{
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+}
+
+.first-content h1{
+    font-family: "Young Serif", sans-serif;
+    padding-top: 20px;
+}
+
+.first-content p{
+    color: var(--Color-02);
+}
+
+.preparation-time{
+    background-color: var(--Color-04);
+    padding: 10px;
+    border-radius: 0.6rem;
+}
+.preparation-time li,
+.ingredients li,
+.instructions li{
+    list-style-position: inside;
+    color: var(--Color-02);
+    font-size: 14px;
+}
+
+.preparation-time li::marker,
+.ingredients li::marker,
+.instructions li::marker{
+    color: var(--Color-p2);
+}
+
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2{
+    font-family: "Young Serif", sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.nutrition p,
+.nutrition .description{
+    color: var(--Color-02);
+    font-size: 14px;
+}
+
+.nutrition tr{
+    padding-top: 10px;
+    display: flex;
+    border-bottom: 1px solid var(--Color-01);
+    justify-content: space-between;
+} 
+
+.nutrition .description{
+    padding-right: 330px;
+}
+
+@media(max-width: 375px) {
+    body {
+        padding: 5px;
+        background-color: transparent;
+    }
+    .container {
+        padding: 10px;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    
+    .first-content h1{
+        font-size: 28px;
+    }
+
+    .preparation-time{
+        max-width: 360px;
+    }
+    .nutrition .description{
+        padding-right: 230px;
+    }
+
+}
